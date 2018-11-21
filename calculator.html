@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Számológépek</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navigation">
+        <nav class="navbar">
+            <a href="index.html" class="nav-but">Főoldal</a>
+            <a href="group.html" class="nav-but">Csapatunk</a>
+            <a href="contact.html" class="nav-but">Kapcsolat</a>
+            <a href="tananyag.html" class="nav-but">Tananyag</a>
+        </nav>
+    </div>
+    <br>
+
+    <h1>Timi Számológép</h1>
+    <input type="number" id="tnum1" name="tnum1" placeholder="Első szám">
+    <select id="tmuvelet">
+        <option id="+" value="+">+</option>
+        <option id="-" value="-">-</option>
+        <option id="*" value="*">*</option>
+        <option id="/" value="/">/</option>
+    </select>
+    <input type="number" id="tnum2" name="tnum2" placeholder="Második szám">
+    <input type="button" onclick="calculate()" value="=">
+    <input id="vegeredmeny" type="number" readonly placeholder="Eredmény">
+    <br>
+    <br>
+    <h1>Anci Számológép</h1>
+    <form>
+        <input type="number" name="anciNumber1Input" id="anciNumber1Input" />
+        <select name="operators" id="anciOperators">
+            <option value="plus" id="plus">+</option>
+            <option value="minus" id="minus">-</option>
+            <option value="multiplying" id="multiplying">*</option>
+            <option value="division" id="division">/</option>
+        </select>
+        <input type="number" name="anciNumber2Input" id="anciNumber2Input" /> =
+        <input type="text" name="anciResult" id="anciResult" readonly>
+        <br><br>
+        <input type="button" name="calculate" value="Számolj" onclick="calc()">
+    </form>
+    <br>
+    <h1>Nóri számológépe</h1>
+    <form>
+        <label for="numberoneInput">Adj meg egy számot</label>
+        <input type="number" id="numberoneInput" name="numberoneInput">
+        <br>
+        <label for="operationInput"> Adj meg egy műveletet</label>
+        <select name="operationInput" id="operationInput">
+            <option value="+" id="addInput">+</option>
+            <option value="-" id="subtractionInput">-</option>
+            <option value="*" id="multipleInput">*</option>
+            <option value="/" id="divisionInput">/</option>
+        </select>
+        <br>
+        <label for="numbertwoInput">Adj meg egy másik számot</label>
+        <input type="number" id="numbertwoInput" name="numbertwoInput">
+        <br>
+        <input type="button" value="Számolj!" onclick="noriCalculator()">
+        <br>
+        <label for="resultInput">Eredmény</label>
+        <input type="text" id="resultInput" name="resultInput" readonly>
+    </form>
+    <br>
+    <form id="calculatorReni" name="szamologepReni">
+        <h1>Reni számológépe</h1>
+        <input id="num1Reni" type="number">
+        <br>
+        <select id="operatorReni">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+        </select>
+        <br>
+        <input id="num2Reni" type="number">
+        <br>
+        <input type="button" value="Az eredmény:" onclick="renicalc()">
+        <br>
+        <input id="resultReni" type="number" readonly>
+    </form>
+    <br>
+    <h1>Dani számológép</h1>
+    <form>
+        <input id="one" type="text" placeholder="Egyik szám" size="10">
+        <select id="operator">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input id="two" type="text" placeholder="Másik szám" size="10">
+        <br>
+        <input id="button" type="button" value="=" onclick="equals()">
+        <br>
+        <input id="result" type="text" placeholder="Eredmény" size="10" readonly>
+        <br>
+        <input id="reset" type="reset" value="reset">
+    </form>
+    <br>
+
+    <script src="Calculators.js"></script>
+</body>
+
+</html>

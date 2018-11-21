@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tananyag</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navigation">
+        <nav class="navbar">
+            <a href="group.html" class="nav-but">Csapatunk</a>
+            <a href="contact.html" class="nav-but">Kapcsolat</a>
+            <a href="calculator.html" class="nav-but">Számológép(ek)</a>
+            <a href="index.html" class="nav-but">Főoldal</a>
+        </nav>
+    </div>
+    <div class="highlight">
+        <h1>HTML-alapok</h1>
+    </div>
+    <div class="text" style="text-align:justify; color:black;">
+        <p>
+            Elakadtál az eddig tanultakban? Fogadd szeretettel rövid kis
+            összefoglalónkat a HTML fájlokról és a leggyakrabban használt
+            parancsokról!
+        </p>
+        <div id="
+        tartalomjegyzek">
+            <h2>Ebben a fejezetben az alábbiakról lesz szó:</h2>
+            <ol type="I">
+                <li>
+                    <a href="#bevezetes" title="Ugrás: Bevezetés">Bevezetés</a>
+                </li>
+                <li>
+                    <a href="#szabvanyok" title="Ugrás: Fő szabványok">Fő szabványok</a>
+                </li>
+                <li>
+                    <a href="#tortenet" title="Ugrás: A HTML története">A HTML története</a>
+                </li>
+                <li>
+                    <a href="#blokkszintu" title="Ugrás: A HTML blokkszintű elemei">A HTML blokkszintű elemei</a>
+                </li>
+                <li>
+                    <a href="#listak" title="Ugrás: Listák készítése">Listák készítése</a>
+                    <ol type="a">
+                        <li>
+                            <a href="#rendezett" title="Ugrás: Rendezett listák">Rendezett listák</a>
+                        </li>
+                        <li>
+                            <a href="#rendezetlen" title="Ugrás: Rendezetlen listák">Rendezetlen listák</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#urlapok" title="Ugrás: Játék az űrlapokkal">Játék az űrlapokkal</a>
+                    <ul>
+                        <li>
+                            <a href="#alapfunkciok" title="Ugrás: Alapfunkciók">Alapfunkciók</a>
+                        </li>
+                        <li>
+                            <a href="#checkbox-radio" title="Ugrás: Checkbox és Radio">Checkbox és Radio</a>
+                        </li>
+                        <li>
+                            <a href="#szelekcio" title="Ugrás: Szelekció">Szelekció</a>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div id="bevezetes">
+            <h2>1. Bevezetés</h2>
+            <p>
+                A <strong>HTML (HyperText Markup Language)</strong> egy
+                bővíthető jelölőnyelv (XML – Extensible Markup Language),
+                mely az XML szabványa szerint kezdő <em>&lt;user&gt;</em> és
+                záró <em>&lt;/user&gt;</em> tag-ek közé helyezi az
+                információkat. Ha ezeket az elemeket különböző
+                tulajdonságokal (attribute) kívánjuk felruházni, akkor
+                azokat a kezdő tag-ben is feltüntethetjük (pl.
+                <em>&lt;user height=”180”&gt;</em>). A tag-en belül
+                beágyazott adatoknak lehetnek gyermek-elemei, melyeket a
+                szülő-elemhez képest egy sorral lentebb, és 2-4 szóközzel
+                bentebb jelenítünk meg.
+            </p>
+            <p>
+                Egy HTML-fájl kötelező elemeiként meg kell határoznunk a
+                dokumentum típusát (ami ez esetben
+                <em>&lt;!DOCTYPE html&gt;</em>), majd mindenképp nyitó és
+                záró tag-ek közé kell helyeznünk az oldalunkat (<em>&lt;html&gt;</em>
+                és <em>&lt;/html&gt;</em>), amit <em>&lt;head&gt;</em> és
+                <em>&lt;body&gt;</em> részre osztunk. A head-be kerülnek
+                azok az adatok, amiket a felhasználók nem, csak a böngésző
+                lát (például hogy milyen fájlokra lesz szüksége a weboldal
+                megnyitásához, hogyan kell feldolgoznia az oldalt, és milyen
+                karakterkészletet használjon). Itt kell megadnunk az
+                oldalunk címét is a <em>&lt;title&gt;</em> nyitó és záró
+                tag-jén belül, ez a böngésző fülén jelenik majd meg.
+                Karakterkódolás tekintetében a legtöbb nyelv által (így az
+                ékezetes magyar nyelv által is) támogatott UTF-8-as
+                univerzális karakterkészletet javasolt használnunk. Ezt az
+                önzáró (self-closed vagy short tag)
+                <em>&lt;meta&gt;</em> elemen belül,
+                <em>charset</em> attribútummal, idézőjelek között határozzuk
+                meg.
+            </p>
+            <p>
+                A <em>&lt;body&gt;</em> elem hordozza a felhasználók számára
+                látható információkat. Itt adhatunk meg egy
+                <em>&lt;h1&gt;</em> tagek közé szorított címet az
+                oldalunknak, és helyezhetünk el különféle szöveges, képes
+                vagy bármilyen tartalmat, amit a későbbi fejezetekben fogunk
+                bővebben tárgyalni.
+            </p>
+        </div>
+        <div id="szabvanyok">
+            <h2>2. Fő szabványok</h2>
+            <ul>
+                <li>
+                    <dl>
+                        <dt>
+                            <strong>SGML (Standard Generalized Markup Language
+                                – Szabványos Általános Jelölőnyelv)</strong>:
+                        </dt>
+                        <dd>
+                            Egy szabvány, amely meghatározza, hogy az ide
+                            tartozó dokumentumoknak milyen formai és egyéb
+                            követelményeknek kell megfelelniük. (ISO
+                            szabványos jelölőnyelv)
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <strong>XML (Extensible Markup Language –
+                                Kiterjeszthető Leíró Nyelv)</strong>:
+                        </dt>
+                        <dd>
+                            Szabályok gyűjteménye, melyek segítségével olyan
+                            szöveges formátumokat állíthatunk elő, amelyek
+                            alkalmasak adatok strukturált leírására.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <strong>HTML (HyperText Markup Language –
+                                Hiperszöveges Jelölőnyelv)</strong>:
+                        </dt>
+                        <dd>
+                            Az SGML specifikusan a Web számára átalakított
+                            módozata. A weblap tartalmát jelöli, különböző
+                            blokkokból (<em>&lt;&gt;</em> tag-ekből áll) és
+                            hivatkozásokból áll, formázását ma már a
+                            <strong>CSS (Cascading Style Sheets – Kaszkádolt
+                                Stíluslapok)</strong>
+                            látja el. Maga a HTML egy egyszerű szöveges fájl
+                            (.html), szövegszerkesztővel szerkeszthető.
+                            Web-kliens architektúrán keresztül, http
+                            protokoll segítségével zajlik a kommunikáció
+                            (80-as port).
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>
+                            <strong>XHTML (Extensible HyperText Markup Language
+                                – Kiterjeszthető Hiperszöveges
+                                Jelölőnyelv)</strong>:
+                        </dt>
+                        <dd>
+                            Az XHTML és a HTML között csak apró különbségek
+                            vannak (az XHTML szigorúbb, a HTML5 újabb)
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div id="tortenet">
+            <h2>3. A HTML története</h2>
+            <p>
+                A HTML-t 1990 óta használják honlapok megjelenítésére.
+                Fejlődését hat fő szakaszra oszthatjuk:
+            </p>
+            <ul>
+                <li>
+                    <strong>Nulladik szint</strong>: HTML 1.0: kialakul az
+                    alapvető szerkezet, nyitó- és záró címkék, head és body,
+                    dokumentumtípus deklarációja (DTD)
+                </li>
+                <li>
+                    <strong>Első szint</strong>: HTML 2: új elemek jöttek
+                    létre <em>&lt;code&gt;</em> forráskód jelölésére,
+                    <em>&lt;em&gt;</em> kiemelésre, <em>&lt;b&gt;</em> a
+                    félkövér, <em>&lt;i&gt;</em> a dőlt karakter jelölésére,
+                    <em>&lt;tt&gt;</em> az azonos betűszélesség
+                    kialakítására.
+                </li>
+                <li>
+                    <strong>Második szint</strong>: Lényegében a HTML2
+                    kiegészítése űrlapokkal, többsoros szövegbevitellel,
+                    kiválasztható opciókkal. Szabvány lett.
+                </li>
+                <li>
+                    <strong>Negyedik szint</strong>: 1997 - HTML4: ez már
+                    SGML alkalmazás: csökkent képességűek figyelembe vétele,
+                    nemzetközi karakterkészletek használata. Frame-ek
+                    használata hivatalossá vált.
+                </li>
+                <li>
+                    <strong>Ötödik szint</strong>: XHTML: kiegészíti a
+                    HTML-4et az XML-lel.
+                </li>
+                <li>
+                    <strong>Hatodik szint</strong>: HTML 5: 2014-es
+                    szabvány, rengeteg új lehetőséggel (<em>audio, video, canvas, svg</em>)
+                </li>
+            </ul>
+        </div>
+        <div id="blokkszintu">
+            <h2>4. A HTML blokkszintű elemei</h2>
+            <p>
+                Az "inline" elemekkel ellentétben nem tűrnek meg maguk
+                mellett más elemet, előttük-utánuk sortörés található, a
+                rendelkezésre álló területet teljes szélességét elfoglalja.
+            </p>
+            <p>
+                Ilyen elem például a <em>&lt;div&gt;</em>, a
+                <em>&lt;p&gt;</em> és a <em>&lt;h1&gt;</em>,
+                <em>&lt;h2&gt;</em> - <em>&lt;h6&gt;</em>. Előbbi a
+                dokumentum logikai egységeit foglalja magába és különféle
+                gyermekelemei is lehetnek (egymásba is foglalhatók), a
+                második bekezdésekre tagolja a szöveget, míg a harmadik a
+                különböző szintű címsorok jelölésére szolgál. Ez utóbbiak
+                betű- és margóméretét a HTML (és így a böngésző)
+                automatikusan nagyobbra formázza az egyszerű bekezdéseknél.
+                A fentieken kívül blokkszintű elemek még a bekezdések,
+                űrlapok, táblázatok is.
+            </p>
+        </div>
+        <div id="listak">
+            <h2>5. Listák készítése</h2>
+            <p>A listákat felsorolások készítésére használjuk.</p>
+            <ol type="a">
+                <li id="rendezett">
+                    <h3>Rendezett listák</h3>
+                    <p>
+                        Szám vagy betű által rendezett listák (ordered
+                        list).
+                    </p>
+                    <p>
+                        A listát a "konténerelem" <em>&lt;ol&gt;</em> és
+                        <em>&lt;/ol&gt;</em> nyitó-és záró tag-je közé
+                        helyezzük úgy, hogy minden elem elé
+                        <em>&lt;li&gt;</em> utána pedig
+                        <em>&lt;/li&gt;</em> tag-et rakunk.
+                    </p>
+                    <p>
+                        A listaelemeket rendezhetjük számmal, betűvel és
+                        római számmal is, ezeket a lista nyitótag-jében
+                        elhelyezett attribútummal tehetünk meg (pl. ha nagy
+                        római számokat szeretnénk:
+                        <em>&lt;ol type="I"&gt;</em> ).
+                    </p>
+                </li>
+                <li id="rendezetlen">
+                    <h3>Rendezetlen listák</h3>
+                    <p>
+                        Csak gondolatjlekkel, pontokkal tagolt lista,
+                        egyenrangú elemek számára (unordered list).
+                    </p>
+                    <p>
+                        A listát az <em>&lt;ul&gt;</em> és
+                        <em>&lt;/ul&gt;</em> nyitó-és záró tag közé
+                        helyezzük úgy, hogy minden elem elé (a rendezett
+                        listához hasonlóan) <em>&lt;li&gt;</em> utána pedig
+                        <em>&lt;/li&gt;</em> tag-et rakunk.
+                    </p>
+                    <p>
+                        Definíciók meghatározására alkalmazhatjuk
+                        <em>&lt;ul&gt;</em> vagy <em>&lt;ol&gt;</em> helyett
+                        a <em>&lt;dl&gt;</em> tag-et, melynek
+                        <em>&lt;dt&gt;</em> eleme a definíció nevét, a
+                        <em>&lt;dd&gt;</em> pedig a meghatározását
+                        tartalmazza.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                A listákat egymásba is ágyazhatjuk, de arra mindig
+                figyeljünk, hogy <em>&lt;li&gt;</em> elem csak
+                <em>&lt;ul&gt;</em> vagy <em>&lt;ol&gt;</em> tag alatt
+                állhat!
+            </p>
+            <p></p>
+        </div>
+        <div id="urlapok">
+            <h2>6. Játék az űrlapokkal</h2>
+            <div id="alapfunkciok">
+                <h3>Alapfunkciók</h3>
+                <p>
+                    Az űrlapok lényegében arra szolgálnak, hogy különféle
+                    adatokat (e-mail cím, telefonszám) kérjünk a
+                    felhasználótól, de regisztrálásra, azonosításra,
+                    üzenetküldésre is lehetőséget biztosít.
+                </p>
+                <p>
+                    Űrlapot a <em>&lt;form&gt;</em> elem nyitó és záró tagje
+                    között tudunk létrehozni, a kezdőelemben attribútumot is
+                    jelölhetünk. A <em>class=""</em> tulajdonságban a form
+                    kinézetét, a <em>role=""</em>-ban a típusát, az
+                    <em>action=""</em>-ben pedig az adatok küldésének
+                    címzettjét adhatjuk meg.
+                </p>
+                <p>
+                    Űrlap készítésénél általában kétféle elemet használunk:
+                    A self-closed <em>&lt;input&gt;</em> elemet, amely a
+                    különféle adatok bevitelére szolgál, illetve a
+                    <em>&lt;label&gt;</em> elemet, ami egyfajta magyarázat a
+                    hozzá tartozó input-elemekhez. Fontos megjegyezni, hogy
+                    a label-tagben <em>for=""</em> attribútummal, az
+                    input-tagben pedig <em>id=""</em>-val adjuk meg azt az
+                    információt, ami összekapcsolja a kettőt. Ez arra is
+                    szolgál, hogy a felhasználó a "label"-ben mezőre
+                    kattintva is tudjon az "input" mezőbe írni.
+                </p>
+                <p>
+                    Az input elemeknél a labelhez tartozó id-n kívül meg
+                    kell adnunk az elem nevét (pl.
+                    <em>name="firstname"</em>). Ez többek közt az adatokat
+                    fogadó szerver számára a felhasználó által szolgáltatott
+                    adatok azonosítására is szolgál. példánkban ekkor
+                    automatikusan egy szövegbeviteli egység jön létre. Ha
+                    speciális beviteli mezőre vágyunk, akkor
+                    <em>type=""</em>-attribútummal meg kell adnunk a bevinni
+                    kívánt szöveg típusát. Alább megtekinthettek egy kis
+                    táblázatot a leggyakoribb típusokról.
+                </p>
+                <table style="width:100%">
+                    <tr>
+                        <th style="width:30%">
+                            Leggyakrabban használt input-típusok
+                        </th>
+                        <th>Fő jellemzőjük</th>
+                    </tr>
+                    <tr>
+                        <td>text</td>
+                        <td>
+                            Alapértelmezett egysoros szövegbeviteli mező,
+                            nincsenek speciális megkötései. Alapértelmezett
+                            értékként üres a beviteli mező, de a
+                            <em>value</em>-tulajdonságban megadhatunk mást
+                            is.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>textarea</td>
+                        <td>Többsoros szövegbeviteli mező</td>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>Név bevitelére szolgál</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>
+                            E-mail cím bevitelére szolgál, a böngésző jelez,
+                            ha nem megfelelő a bevitt szöveg formátuma
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>number</td>
+                        <td>Szám bevitelére szolgál</td>
+                    </tr>
+                    <tr>
+                        <td>date</td>
+                        <td>
+                            Ha a beviteli mező típusa <em>date</em>, a
+                            böngésző kis naptárt jelenít meg a dátum
+                            beírásának megkönnyítésére. A dátum formátuma
+                            Év, hónap, nap, időpont lesz, az aktuális
+                            időzónát nem tünteti fel.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td>
+                            Jelszó bevitelére szolgál. Segítségével a
+                            felhasználói felületen külső szemlélő számára
+                            nem láthatóak a karakterek, de ez valójában csak
+                            "maszkolás", a böngésző Vizsgálat menüpontjában
+                            meg lehet a jelszót tekinteni.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>submit</td>
+                        <td>
+                            Az űrlapon megadott egyéb adatok (a
+                            <em>form</em> tag <em>action</em> attribútumában
+                            meghatározott címre való) elküldésére szolgáló
+                            gombot hoz létre. Az input
+                            <em>value=""</em> tulajdonságában megadhatjuk a
+                            gombra véshető feliratot.
+                        </td>
+                    </tr>
+                </table>
+
+                <p>
+                    A label elemeknél nyitó és zárótag között adjuk meg a
+                    magyarázatot, ami megjelenik a HTML-dokumentumban.
+                </p>
+            </div>
+            <div id="checkbox-radio">
+                <h3>Checkbox és Radio</h3>
+                <p>
+                    Mindkét elemet <em>input</em>-ban hozzuk létre,
+                    mindkettő adatbevitelre szolgál, és mindkét esetben a
+                    felhasználónak gépelés helyett csupán válaztania kell a
+                    felkínált lehetőségek közül. Mégis miben különböznek
+                    akkor egymástól?
+                </p>
+                <p>
+                    A checkbox egy önálló elem, amit bepipálva a felhasználó
+                    jelzi, hogy igent mond az általunk feltett kérdésre. (Ez
+                    a funkció hírlevélre való feliratkozásnál, adatkezelési
+                    jogosultság megadásánál is hasznos lehet.
+                </p>
+                <p>
+                    A <em>checkbox</em>-attribútumot az input elemben,
+                    <em>name</em>-mel és <em>id</em>-vel együtt adjuk meg. A
+                    hozzá tartozó label általában az input után található,
+                    és a <em>for</em>-attribútumban hordozza az input
+                    <em>id</em>-ját, a nyitó és záró tag-je között pedig
+                    feltüntetjük a felhasználóval elfogadtatni kívánt
+                    információt.
+                </p>
+                <p>
+                    Ha azt szeretnénk, hogy a checkbox kis négyzete
+                    alapértelmezetten pipálva legyen, az input-mezőben
+                    megadhatjuk a <em>checked</em> tulajdonságot is. Mivel
+                    ennek nincs értéke, nem kötelező egyenlőségjel után
+                    kiírni az értékét (<em>checked="checked"</em>), elég
+                    csak ennyi: <em>checked</em>. Hasonló működésű hasznos
+                    tulajdonságok még űrlap készítésénél a
+                    <em>required</em>, a <em>mutiple</em> vagy a
+                    <em>readonly</em> attribútumok is.
+                </p>
+                <p>
+                    A radio elemeket arra használjuk, hogy a felhasználónk
+                    több lehetőségből pontosan egyet tudjon választani. A
+                    kijelölést ugyanis ismételt kattintással nem lehet
+                    kivenni, csak akkor szűnik meg, ha a user egy másik
+                    rádiógombra kattint.
+                </p>
+                <p>
+                    Ezeket is az input-elemben hozzuk létre, típusuk
+                    <em>radio</em> lesz. Fontos, hogy mindegyik
+                    radio-elemnek ugyanazt a <em>name</em>-attribútumot
+                    adjuk meg, így a böngésző számára egyértelműek lesznek a
+                    választási lehetőségek. A különböző radio-elemek
+                    <em>value</em>-értékének viszont különböznie kell, mivel
+                    így a böngésző nem az összes lehetőséget, hanem csak a
+                    felhasználó választását küldi majd el a szervernek.
+                </p>
+                <p>
+                    A radio-elemek között a self-closed
+                    <em>&lt;br&gt;</em> tag-gel tördelhetjük a sorokat.
+                </p>
+                <p>
+                    Az alapértelmezett választást itt is
+                    <em>checked</em>-attribútummal jelölhetjük.
+                </p>
+            </div>
+            <div id="szelekcio">
+                <h3>Szelekció</h3>
+                <p>
+                    Egy label-elem párjaként a <em>&lt;select&gt;</em> elem
+                    több elem közüli választási lehetőséget biztosít. Nyitó
+                    és zárótagje között gyermekelemként jelenítjük meg az
+                    opciókat (<em>&lt;option&gt;</em>). Az
+                    <em>option</em>-ökhöz kötelezően <em>value</em>-k
+                    tartoznak, nyitó és zárótag-juk között pedig megadjuk a
+                    felhasználó számára is látható értéket.
+                </p>
+                <p>
+                    A felhasználó számára a választási lehetőségek egy
+                    listában lesznek láthatók, a radio-elemhez hasonlóan a
+                    böngésző az user által kiválasztott elem
+                    <em>value</em>-értékét továbbítja a szerver számára.
+                </p>
+                <p>
+                    Az alapértelmezett választási lehetőséget az érintett
+                    opcióban a <em>selected</em> attribútummal adhatjuk meg,
+                    a <em>checked</em>-hez hasonlóan ennek sem kell külön
+                    értéket megadni.
+                </p>
+                <p>
+                    Amennyiben több választási lehetőséget is szeretnénk a
+                    felhasználónknak biztosítani, a
+                    <em>&lt;select&gt;</em>-nyitótag-ben a
+                    <em>multiple</em>-attribútumot kell megadnunk. Ez a
+                    parancs egy legördülő listát hoz létre, amelyből a ctrl
+                    vagy shift billentyű lenyomásával több opció is
+                    kiválasztható. A <em>multiple</em> attribútum esetén
+                    <em>size</em> paraméterrel az is megadható, hogy hány
+                    sor legyen látható a megjelenített legördülő listából.
+                </p>
+                <p>
+                    A választási lehetőségeket az
+                    <em>&lt;optgroup&gt;</em>-taggel csoportosíthatjuk (az
+                    <em>&lt;option&gt;</em> elemek szülő-elemévé válik).
+                </p>
+            </div>
+        </div>
+        <div>
+            <h2>
+                Egyelőre ennyit a HTML-ről, jó tanulást kívánunk
+                mindenkinek! :-)
+            </h2>
+        </div>
+    </div>
+</body>
+
+</html>
